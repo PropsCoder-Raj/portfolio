@@ -1,0 +1,213 @@
+/* Declare CSS variables globally */
+:root {
+    --color-primary: #191d2b;
+    --color-secondary: #cb2739;
+    --color-lightblue: #61dafb;
+    --color-white: #FFFFFF;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey-1: #dbe1e8;
+    --color-grey-2: #b2becd;
+    --color-grey-3: #6c7983;
+    --color-grey-4: #454e56;
+    --color-grey-5: #2a2e35;
+    --color-grey-6: #12181b;
+    --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: unset;
+    background: #191d2b;
+}
+
+.h-shape {
+    transition: all 0.4s ease-in-out;
+    width: 65%;
+    height: 100%;
+    background-color: var(--color-secondary, #6c63ff);
+    /* fallback color */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+}
+
+.font-poppins {
+    font-family: "Poppins" !important;
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.text-heading {
+    font-size: 4rem;
+}
+
+.text-heading-highlight {
+    background: linear-gradient(270deg,
+            #f32170,
+            #ff6b08,
+            #cf23cf,
+            #eedd44,
+            #f32170);
+    background-size: 1000% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: scrollGradient 8s linear infinite;
+}
+
+@keyframes scrollGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.main-section {
+    border-bottom: 1px solid var(--color-secondary);
+    /* Change color as needed */
+}
+
+.about-section {
+    position: relative;
+}
+
+.main-title {
+    text-align: center;
+    position: relative;
+}
+
+.main-title h2 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: unset;
+    padding-top: 50px;
+    height: 10vh;
+}
+
+.main-title h2 span {
+    color: var(--color-secondary);
+    /* Or your --color-secondary */
+    padding-top: 50px;
+}
+
+.main-title h2 .bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgba(255, 255, 255, 0.05);
+    /* Or your --color-grey-5 */
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 6.3rem;
+    pointer-events: none;
+}
+
+.bg-main-center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    /* Or your --color-grey-5 */
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 6.3rem;
+    pointer-events: none;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card h1 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--color-secondary); /* Customize color */
+  transition: width 0.3s ease;
+}
+
+.card:hover h1::after {
+  width: 100%;
+}
+
+
+.about-item {
+    border: 1px solid var(--color-grey-5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-item:hover {
+    cursor: default;
+    transform: translateY(-5px);
+    border: 1px solid var(--color-secondary);
+    box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+
+.about-item .abt-text {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-item .abt-text .large-text {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin: unset;
+}
+
+.about-item .abt-text .small-text {
+    padding-left: 3rem;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--color-grey-1);
+    letter-spacing: 2px;
+}
+
+.about-item .abt-text .small-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-grey-5);
+}
