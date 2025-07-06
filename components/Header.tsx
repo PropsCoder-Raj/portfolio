@@ -27,6 +27,10 @@ export default function Header() {
             <div className="w-1/2 flex items-center">
                 <div className="text-8xl text-white">
                     <h1 className="font-bold mb-4 font-poppins text-heading">Hi, I&apos;m <span className="text-secondary">Rohit</span> <br></br> A <span className="text-heading-highlight">Software</span> Engineer.</h1>
+                    <p className="flex items-center">Currently, I&apos;m a Software Engineer at &nbsp;
+                        <Image src="/img/Spareit.jpg" alt="SpareIT LOGO" height={20} width={20} style={{ borderRadius: "10px" }}/>
+                        &nbsp;SpareIT
+                    </p>
                     {/* <p className="text-lg text-gray-700">
             I&apos;m a Software Developer with over 3 years of experience in web application development, primarily focused on backend development. I specialize in building robust and scalable server-side applications using Node.js, and also have hands-on experience developing responsive front-end interfaces using Angular. My expertise spans across the MEAN stack, and I enjoy delivering solutions that are both functional and efficient.
           </p> */}
