@@ -86,7 +86,8 @@ body {
     /* Change color as needed */
 }
 
-.about-section {
+.about-section,
+.work-experince-section {
     position: relative;
 }
 
@@ -137,6 +138,19 @@ body {
     pointer-events: none;
 }
 
+.bg-main-right-bottom {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    /* Or your --color-grey-5 */
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    /* transform: translate(-50%, -50%); */
+    font-weight: 800;
+    font-size: 6.3rem;
+    pointer-events: none;
+}
+
 .card {
     background: rgba(255, 255, 255, 0.05);
     padding: 15px;
@@ -144,24 +158,25 @@ body {
 }
 
 .card h1 {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .card h1::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background-color: var(--color-secondary); /* Customize color */
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--color-secondary);
+    /* Customize color */
+    transition: width 0.3s ease;
 }
 
 .card:hover h1::after {
-  width: 100%;
+    width: 100%;
 }
 
 
@@ -210,4 +225,90 @@ body {
     width: 2rem;
     height: 2px;
     background-color: var(--color-grey-5);
+}
+
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Only remove margin-top for skills grids inside skills-group */
+.skills-group .skills-grid {
+    margin-top: 0;
+}
+
+.skill-card {
+    background: rgba(148, 163, 184, 0.05);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.skill-card:hover {
+    background: rgba(203,39,57, 0.1);
+    border: 1px solid var(--color-secondary);
+    transform: translateY(-10px);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.skill-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    margin-top: 0.75rem;
+    background: rgba(148, 163, 184, 0.15);
+    border-radius: 8px;
+    height: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-secondary) 60%, #ff0000 100%);
+    width: 90%;
+    border-radius: 8px 0 0 8px;
+    transition: width 0.6s;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: #cbd5e1;
+}
+
+.skills-group-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.skills-grid {
+    margin-top: 0;
+}
+
+.skills-group {
+    margin-bottom: 2rem;
 }
