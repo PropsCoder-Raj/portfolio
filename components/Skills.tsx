@@ -16,7 +16,7 @@ export default function Skills() {
             title: "Frameworks",
             list: [
                 { name: "Node JS", year: 3, percentage: 80, icon: "fab fa-node-js" },
-                { name: "Express JS", year: 2, percentage: 0, icon: "fab fa-node-js" },
+                { name: "Express JS", year: 2, percentage: 70, icon: "fab fa-node-js" },
             ]
         },
         {
@@ -31,6 +31,7 @@ export default function Skills() {
             title: "Cloud, Tools & Other",
             list: [
                 { name: "GCP", year: 1, percentage: 80, icon: "fab fa-google" },
+                { name: "AWS", year: 0.5, percentage: 50, icon: "fab fa-aws" },
                 { name: "Firebase", year: 1, percentage: 80, icon: "fas fa-fire" },
                 { name: "HTML5", year: 1, percentage: 80, icon: "fab fa-html5" },
                 { name: "CSS3", year: 1, percentage: 80, icon: "fab fa-css3-alt" },
