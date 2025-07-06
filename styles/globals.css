@@ -1,0 +1,69 @@
+/* Declare CSS variables globally */
+:root {
+    --color-secondary: #cb2739;
+    --color-white: #ffffff;
+    /* Example: a violet-blue color */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    margin: unset;
+    background: #191d2b;
+}
+
+.h-shape {
+    transition: all 0.4s ease-in-out;
+    width: 65%;
+    height: 100%;
+    background-color: var(--color-secondary, #6c63ff);
+    /* fallback color */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+}
+
+.font-poppins {
+    font-family: "Poppins" !important;
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.text-heading {
+    font-size: 3rem;
+}
+
+.text-heading-highlight {
+  background: linear-gradient(
+    270deg,
+    #f32170,
+    #ff6b08,
+    #cf23cf,
+    #eedd44,
+    #f32170
+  );
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: scrollGradient 8s linear infinite;
+}
+
+@keyframes scrollGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
